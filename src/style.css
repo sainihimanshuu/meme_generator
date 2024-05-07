@@ -1,6 +1,7 @@
 body{
     margin: 0;
     font-family: Inter;
+    height: 100%;
 }
 
 .header{
@@ -37,8 +38,8 @@ main{
 
 .form{
     display: grid;
-    grid-template: 40px 40px / 1fr 1fr;
-    gap: 17px;
+    grid-template: 40px 40px / 1fr 1fr; /*2 40px rows and then evenly divide the columns with fraction units (1fr each)*/
+    gap: 17px; /*i guess gap between 2 rows*/
 }
 
 .form--input{
@@ -48,7 +49,7 @@ main{
 }
 
 .form--button{
-    grid-column: 1 / -1;
+    grid-column: 1 / -1; /*from the very beginning to very end*/
     border-radius: 5px;
     background-image: linear-gradient(to right, #672280, #A818DA);
     color: white;
@@ -56,8 +57,38 @@ main{
     cursor: pointer;
 }
 
-/* .meme--img{
-    max-width: 477px;
-    max-height: 268px;
-} */
+.meme{
+    position: relative;
+    margin-top: 32px; 
+    width: 100%;
+}
 
+.meme--img{
+    padding: 0;
+    display: block;
+    margin: 0 auto;
+    max-height: 100%;
+    width: 100%;
+}
+
+.meme--text-top{
+    position: absolute;
+    color: #fff;
+    font-weight: bold;
+    top: 16px;
+    transform: translate;
+    font-size: 32px;
+    left: 50%;
+    transform: translate(-50%, 0);   
+}
+
+.meme--text-bottom{
+    position: absolute;
+    color: #fff;
+    font-weight: bold;
+    bottom: 16px;
+    transform: translate;
+    font-size: 32px;
+    left: 50%;
+    transform: translate(-50%, 0);  
+}
